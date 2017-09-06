@@ -13,7 +13,7 @@ namespace Calculator.Library
 
         public void AskInput()
         {
-            Console.WriteLine("Enter a date in the follwing format: dd/mm/yyyy: ");
+            Console.WriteLine("Enter a date in the follwing format: dd-mm-yyyy: ");
             string dateInput = Console.ReadLine();
 
             if (ParseInput(dateInput, out age))
@@ -24,7 +24,7 @@ namespace Calculator.Library
 
         public int CalculateAge(DateTime dateOfBirth)
         {
-            var todaysDate = Convert.ToDateTime(DateTime.Now.ToString("dd/MM/yyyy"));
+            var todaysDate = Convert.ToDateTime(DateTime.Now.ToString("dd-MM-yyyy"));
             int age = todaysDate.Year - dateOfBirth.Year;
 
             if (DateTime.Now.DayOfYear < dateOfBirth.DayOfYear)
@@ -35,7 +35,7 @@ namespace Calculator.Library
 
         public bool ParseInput(string input, out DateTime result)
         {
-            if (DateTime.TryParseExact(input, "dd/MM/yyyy", CultureInfo.InvariantCulture,
+            if (DateTime.TryParseExact(input, "dd-MM-yyyy", CultureInfo.InvariantCulture,
                 DateTimeStyles.None, out result))
                 return true;
             else

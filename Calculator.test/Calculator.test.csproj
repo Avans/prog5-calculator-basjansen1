@@ -55,6 +55,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Calculator.Library\Calculator.Library.csproj">
+      <Project>{627d3055-2283-4590-8e14-b99d8e5e2648}</Project>
+      <Name>Calculator.Library</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Calculator\Calculator.csproj">
       <Project>{23c0e3dc-567d-4af1-a9b2-9a5805363b41}</Project>
       <Name>Calculator</Name>
