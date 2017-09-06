@@ -35,8 +35,7 @@ namespace Calculator.Library
 
         public bool ParseInput(string input, out DateTime result)
         {
-            if (DateTime.TryParseExact(input, "dd-MM-yyyy", CultureInfo.InvariantCulture,
-                DateTimeStyles.None, out result))
+            if (DateTime.TryParse(input, out result))
                 return true;
             else
             {
